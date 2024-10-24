@@ -1,5 +1,5 @@
 import LeftSide from "./LeftSide"
-import RightSide from "./RIghtSide"
+import RightSide from "./RightSide"
 
 export default function Content() {
     return (
