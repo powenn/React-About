@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #282c34, #434343);
+    color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    perspective: 1200px;
+}
+
+#app {
+    width: 95%;
+    max-width: 1300px;
+    background: #2c2f33;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    margin: 20px 0;
+}
+
+#app:hover {
+    transform: rotateY(0) rotateX(0);
+}
+
+header.profile-header {
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: translateZ(30px);
+    transition: transform 0.3s ease;
+}
+
+header.profile-header:hover {
+    transform: scale(1.05);
+}
+
+header.profile-header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+header.profile-header h2 {
+    font-size: 2rem;
+    color: #a8bfc8;
+}
+
+header.profile-header h3 {
+    font-size: 1.5rem;
+    color: #b0b0b0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    /* 確保內容底部對齊 */
+    margin-top: 30px;
+}
+
+.left-side,
+.right-side {
+    display: flex;
+    flex-direction: column;
+    /* 使左側和右側的內容垂直排列 */
+    flex: 1;
+    /* 各自佔用一半空間 */
+}
+
+.left-side {
+    margin-right: 20px;
+}
+
+.right-side {
+    margin-left: 20px;
+}
+
+section.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    flex: 1;
+    /* 各區塊佔用相同空間 */
+}
+
+section.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+section h4 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+ul li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.cert-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cert-item img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    max-width: 100%; /* 使用 100% 來自適應容器的寬度 */
+    height: auto; /* 自動調整高度以保持比例 */
+    max-height: 200px; /* 設置最大高度以保持一致 */
+}
+
+
+.cert-item img:hover {
+    transform: scale(1.05);
+}
+
+.cert-item h5 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+table th {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input[type="text"] {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transition: background 0.3s ease;
+}
+
+form input[type="text"]:focus {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+form input[type="submit"] {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #7289da;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form input[type="submit"]:hover {
+    background: #5a6e9d;
+    transform: scale(1.03);
+}
+
+p.highlight {
+    text-align: center;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    header.profile-header {
+        padding: 20px;
+    }
+
+    section.card {
+        padding: 20px;
+    }
+
+    section h4 {
+        font-size: 1.5rem;
+    }
+
+    ul li {
+        font-size: 1rem;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+    }
+
+    #app {
+        width: 100%;
+        /* 對於小屏幕設置寬度為100% */
+    }
+
+    .content {
+        flex-direction: column;
+        /* 垂直排列 */
+    }
+
+    .left-side,
+    .right-side {
+        padding: 0;
+        /* 移除內邊距 */
+        margin-bottom: 20px;
+        /* 增加下邊距 */
+    }
+}
